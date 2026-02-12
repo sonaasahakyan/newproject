@@ -1,0 +1,11 @@
+{
+  "name": "trip-planner-cost-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack trip planning and cost calculator app",
+  "scripts": {
+    "start": "node backend/src/index.js",
+    "dev": "node backend/src/index.js",
+    "test": "node --test backend/src/planner.test.js"
+  }
+}
