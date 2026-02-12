@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Planner & Cost Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Trip Planner & Cost Calculator</h1>
+    <p class="subtitle">Estimate your trip budget from your initial plan.</p>
+
+    <form id="trip-form" class="card">
+      <div class="grid">
+        <label>Destination
+          <input type="text" name="destination" placeholder="e.g., Bali" />
+        </label>
+
+        <label>Travelers
+          <input type="number" name="travelers" min="1" value="2" required />
+        </label>
+
+        <label>Days
+          <input type="number" name="days" min="1" value="5" required />
+        </label>
+
+        <label>Transport (total)
+          <input type="number" name="transport" min="0" step="0.01" value="800" required />
+        </label>
+
+        <label>Accommodation / night
+          <input type="number" name="accommodationPerNight" min="0" step="0.01" value="120" required />
+        </label>
+
+        <label>Food / day / traveler
+          <input type="number" name="foodPerDayPerPerson" min="0" step="0.01" value="35" required />
+        </label>
+
+        <label>Activities (total)
+          <input type="number" name="activities" min="0" step="0.01" value="250" required />
+        </label>
+
+        <label>Miscellaneous
+          <input type="number" name="misc" min="0" step="0.01" value="100" required />
+        </label>
+
+        <label>Contingency (%)
+          <input type="number" name="contingencyPercent" min="0" step="0.1" value="10" required />
+        </label>
+      </div>
+
+      <button type="submit">Calculate Plan</button>
+    </form>
+
+    <section id="result" class="card hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
